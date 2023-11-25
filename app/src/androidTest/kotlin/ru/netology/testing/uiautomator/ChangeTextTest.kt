@@ -104,7 +104,7 @@ class ChangeTextTest {
         waitForPackage(packageName)
 
         device.findObject(By.res(packageName, "userInput")).text = textToSet
-        device.findObject(By.res(packageName, "buttonChange")).click()
+        device.findObject(By.res(packageName, "buttonActivity")).click()
 
         val result = device.findObject(By.res(packageName, "textToBeChanged")).text
         assertEquals(result, textToSet)
@@ -115,7 +115,7 @@ class ChangeTextTest {
         waitForPackage(packageName)
 
         device.findObject(By.res(packageName, "userInput")).text = textNoString
-        device.findObject(By.res(packageName,"buttonChange")).click()
+        device.findObject(By.res(packageName,"buttonActivity")).click()
 
         val result = device.findObject(By.res(packageName, "textToBeChanged")).text
         assertEquals(result, textEmptyAc);
@@ -126,7 +126,7 @@ class ChangeTextTest {
         waitForPackage(packageName)
 
         device.findObject(By.res(packageName, "userInput")).text = textToSet
-        device.findObject(By.res(packageName, "buttonChange")).click()
+        device.findObject(By.res(packageName, "buttonActivity")).click()
 
         waitForPackage(MODEL_PACKAGE)
 
